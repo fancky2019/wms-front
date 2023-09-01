@@ -1,0 +1,23 @@
+module.exports = {
+  root: true,
+  'extends': [
+    'plugin:vue/essential',
+
+  ],
+  rules: {
+    // allow async-await
+    'generator-star-spacing': 'off',
+    // allow debugger during development
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/no-parsing-error': [2, {
+      'x-invalid-end-tag': false
+    }],
+    'no-undef': 'off',
+    'camelcase': 'off',
+    //关闭名称校验
+    'vue/multi-word-component-names':'off'
+  },
+  parserOptions: {
+    parser: '@babel/eslint-parser'
+  }
+}
